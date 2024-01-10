@@ -1,18 +1,29 @@
 #include <stdio.h>
-struct Client {
-  char nom[50];
-  char prenom[50];
-  int age;
+
+struct CompteBancaire {
+    char nom[50];
+    int numeroCompte;
+    float solde;
 };
 
 int main() {
-  struct Client client1  = {"Léo", "GUIGUE", 2005};
-  struct Client client2  = {"Bruno", "GUIGUE", 1972};
-  struct Client client3  = {"Anthony", "GUIGUE", 2003};
+    struct CompteBancaire nouveauCompte;
 
-  printf("%s %s %d\n", client1.nom, client1.prenom, client1.age);
-  printf("%s %s %d\n", client2.nom, client2.prenom, client2.age);
-  printf("%s %s %d\n", client3.nom, client3.prenom, client3.age);
+    // Demander les informations au client
+    printf("Entrez votre nom : ");
+    scanf("%s", nouveauCompte.nom);
 
-  return 0;
+    printf("Entrez le numéro de compte : ");
+    scanf("%d", &nouveauCompte.numeroCompte);
+
+    printf("Entrez le solde initial : ");
+    scanf("%f", &nouveauCompte.solde);
+
+    //Informations du compte
+    printf("\nCompte créé avec succès ! Voici les informations :\n");
+    printf("Nom du titulaire : %s\n", nouveauCompte.nom);
+    printf("Numéro de compte : %d\n", nouveauCompte.numeroCompte);
+    printf("Solde : %.2f\n", nouveauCompte.solde);
+
+    return 0;
 }
