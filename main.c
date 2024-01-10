@@ -9,7 +9,7 @@ struct CompteBancaire {
 int main() {
     struct CompteBancaire nouveauCompte;
 
-    // Demander les informations au client
+    // Les informations du client
     printf("Entrez votre nom : ");
     scanf("%s", nouveauCompte.nom);
 
