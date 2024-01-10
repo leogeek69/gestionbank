@@ -19,11 +19,11 @@ int main() {
     printf("Entrez le solde initial : ");
     scanf("%f", &nouveauCompte.solde);
 
-    //Informations du compte
-    printf("\nCompte créé avec succès ! Voici les informations :\n");
+    // Informations du compte
+    printf("\nCompte créé avec les informations suivante :\n");
     printf("Nom du titulaire : %s\n", nouveauCompte.nom);
     printf("Numéro de compte : %d\n", nouveauCompte.numeroCompte);
-    printf("Solde : %.2f\n", nouveauCompte.solde);
+    printf("Solde : %.2f\n", nouveauCompte.solde); // .2 pour deux chiffre après la virgule et "f" car c'est un float
 
     return 0;
 }
