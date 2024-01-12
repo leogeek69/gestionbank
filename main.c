@@ -1,6 +1,5 @@
 #include <stdio.h>
-
-//aidé par Yann 
+ 
 
 void compte_banque();
 void interface();
@@ -48,7 +47,7 @@ void interface() {
                 break;
 
             case 1:
-                printf("Vous avez %f \n", Argent);
+                printf("Vous avez %.2f \n", Argent);
                 choix = 0;
                 break;
 
@@ -56,7 +55,7 @@ void interface() {
                 printf("Combien d'argent voulez-vous ajouter ? \n");
                 scanf("%f", &cmbargent);
                 Argent = Argent + cmbargent;
-                printf("Vous avez ajouté : %f\n", cmbargent);
+                printf("Vous avez ajouté : %.2f\n", cmbargent);
                 choix = 0;
                 break;
 
@@ -73,7 +72,7 @@ void interface() {
                         printf("Vous ne pouvez pas retirer autant, fonds insuffisants.\n");
                     } else {
                         Argent = Argent - argentretir;
-                        printf("Vous avez retiré %f\n", argentretir);
+                        printf("Vous avez retiré %.2f\n", argentretir);
                     }
                     choix = 0;
                 } else {
